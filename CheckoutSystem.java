@@ -34,7 +34,7 @@ class Product {
 }
 
 
-public class CheckoutSystem1 {
+public class CheckoutSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
