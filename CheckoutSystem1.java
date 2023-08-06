@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 class Product {
-    String name;
-    double price;
-    int quantity;
+    private final String name;
+    private final double price;
+    private final int quantity;
 
     public Product(String name, double price, int quantity) {
         this.name = name;
@@ -14,10 +14,25 @@ class Product {
         this.quantity = quantity;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+
     public double getTotalPrice() {
         return price * quantity;
     }
 }
+
 
 public class CheckoutSystem1 {
     public static void main(String[] args) {
@@ -80,7 +95,7 @@ public class CheckoutSystem1 {
         System.out.println("          ITEM                  QTY              PRICE         TOTAL(NGN)");
         System.out.println("------------------------------------------------------------------------------------------------------------------");
         for (Product product : products) {
-            System.out.printf("%15s%20d%20.2f%20.2f%n", product.name, product.quantity, product.price, product.getTotalPrice());
+            System.out.printf("%15s%20d%20.2f%20.2f%n", product.getName(), product.getQuantity(), product.getPrice(), product.getTotalPrice());
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%55s%.2f%n", "Sub Total:", total);
@@ -108,7 +123,7 @@ public class CheckoutSystem1 {
         System.out.println("          ITEM                  QTY              PRICE         TOTAL(NGN)");
         System.out.println("------------------------------------------------------------------------------------------------------------------");
         for (Product product : products) {
-            System.out.printf("%15s%20d%20.2f%20.2f%n", product.name, product.quantity, product.price, product.getTotalPrice());
+            System.out.printf("%15s%20d%20.2f%20.2f%n", product.getName(), product.getQuantity(), product.getPrice(), product.getTotalPrice());
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%55s%.2f%n", "Sub Total:", total);
