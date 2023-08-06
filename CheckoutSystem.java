@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 class Product {
-    private final String name;
-    private final double price;
-    private final int quantity;
+    private String name;
+    private double price;
+    private int quantity;
 
     public Product(String name, double price, int quantity) {
         this.name = name;
